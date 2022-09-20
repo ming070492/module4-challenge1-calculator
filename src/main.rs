@@ -1,4 +1,5 @@
 //Sorry for adding some colors >T_T<
+//this code will panick if the user inputs a non-integer value including alphabets and special characters
 
 use std::io;
 
