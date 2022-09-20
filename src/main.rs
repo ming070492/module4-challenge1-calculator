@@ -13,18 +13,15 @@ fn main() {
     println!("\x1b[93m*******************************************\x1b[0m");
 
     fn math_add(num_1: i64, num_2: i64) -> i64 {
-            let mut ans: i64 = 0;
-            ans = num_1 + num_2;
+            let ans = num_1 + num_2;
             ans
     }
     fn math_sub(num_1: i64, num_2: i64) -> i64 {
-        let mut ans: i64 = 0;
-        ans = num_1 - num_2;
+        let ans = num_1 - num_2;
         ans
     }
     fn math_mul(num_1: i64, num_2: i64) -> i64 {
-        let mut ans: i64 = 0;
-        ans = num_1 * num_2;
+        let ans = num_1 * num_2;
         ans
     }
     fn math_div(num_1: i64, num_2: i64) -> f64 {
@@ -32,8 +29,7 @@ fn main() {
             println!("\x1b[91mERR:\x1b[0m DIVIDING BY ZERO IS NOT ALLOWED.");
             0.0
         }else{
-            let mut ans: f64 = 0.0;
-            ans = num_1 as f64 / num_2 as f64;
+            let ans = num_1 as f64 / num_2 as f64;
             ans
         }
     }
@@ -51,9 +47,6 @@ fn main() {
         num_vec
     }
 
-    
-    let mut is_set = false;
-    let mut numbers = Vec::new();
     let mut not_done = true;
 
     while not_done {
@@ -66,25 +59,25 @@ fn main() {
             println!("\x1b[93m-------------------------------------------\x1b[0m");
             println!("  \x1b[92mADDITION SELECTED\x1b[0m");
             println!("\x1b[93m-------------------------------------------\x1b[0m");
-            numbers = get_two_numbers();
+            let numbers = get_two_numbers();
             println!("ANSWER: \x1b[92m\x1b[1m{}\x1b[0m", math_add(numbers[0], numbers[1]));
         } else if operation.trim() == "-" {
             println!("\x1b[93m-------------------------------------------\x1b[0m");
             println!("  \x1b[92mSUBTRACTION SELECTED\x1b[0m");
             println!("\x1b[93m-------------------------------------------\x1b[0m");
-            numbers = get_two_numbers();
+            let numbers = get_two_numbers();
             println!("ANSWER: \x1b[92m\x1b[1m{}\x1b[0m", math_sub(numbers[0], numbers[1]));
         } else if operation.trim() == "*" {
             println!("\x1b[93m-------------------------------------------\x1b[0m");
             println!("  \x1b[92mMULTIPLICATION SELECTED\x1b[0m");
             println!("\x1b[93m-------------------------------------------\x1b[0m");
-            numbers = get_two_numbers();
+            let numbers = get_two_numbers();
             println!("ANSWER: \x1b[92m\x1b[1m{}\x1b[0m", math_mul(numbers[0], numbers[1]));
         } else if operation.trim() == "/" {
             println!("\x1b[93m-------------------------------------------\x1b[0m");
             println!("  \x1b[92mDIVISION SELECTED\x1b[0m");
             println!("\x1b[93m-------------------------------------------\x1b[0m");
-            numbers = get_two_numbers();
+            let numbers = get_two_numbers();
             let ans: f64 = math_div(numbers[0], numbers[1]);
             if ans != 0.0 {
                 println!("ANSWER: \x1b[92m\x1b[1m{}\x1b[0m", ans);
